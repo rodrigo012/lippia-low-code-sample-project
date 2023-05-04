@@ -1,0 +1,11 @@
+image: docker:rc-dind
+
+    
+Test:
+  stage: test
+  script:
+    - docker-compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from lippia
+  artifacts:
+    when: always
+    paths:
+      - target/reports/
