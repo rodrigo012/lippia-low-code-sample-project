@@ -24,6 +24,7 @@ GitHub publish:
   stage: Publish
   script:
     - git remote add github https://$GITHUB_USER:$GITHUB_TOKEN@github.com/Crowdar/Lippia-Low-Code-Sample-Project.git
-    - git push -u github HEAD:main
+    - git branch -M main
+    - git push -u origin main
   rules:
     - if: '$CI_COMMIT_BRANCH == "main"'
