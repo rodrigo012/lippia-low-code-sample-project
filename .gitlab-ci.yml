@@ -20,8 +20,8 @@ Test:
       - target/reports/
 
 GitHub publish:
-  image: crowdar/pipeline:2.0.1
   stage: Publish
+  image: crowdar/pipeline:2.0.1
   script:
     - git remote add github https://$GITHUB_USER:$GITHUB_TOKEN@github.com/Crowdar/Lippia-Low-Code-Sample-Project.git
     - git push -u github main
