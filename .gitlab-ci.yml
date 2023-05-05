@@ -24,6 +24,7 @@ GitHub publish:
   image: crowdar/pipeline:2.0.1
   script:
     - git remote add github https://$GITHUB_USER:$GITHUB_TOKEN@github.com/Crowdar/Lippia-Low-Code-Sample-Project.git
+    - git checkout main
     - git push -u github main
   rules:
     - if: '$CI_COMMIT_BRANCH == "main"'
