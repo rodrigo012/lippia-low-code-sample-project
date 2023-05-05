@@ -1,7 +1,7 @@
 image: docker:latest
 
 services:
-  - name: 24.0.0-rc.1-dind-alpine3.17
+  - name: docker:24.0.0-rc.1-dind-alpine3.17
 
 Test:
   stage: test
