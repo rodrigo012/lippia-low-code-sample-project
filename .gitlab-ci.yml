@@ -1,7 +1,10 @@
 image: docker:latest
-
 services:
   - name: docker:24.0.0-rc.1-dind-alpine3.17
+variables:
+  DOCKER_HOST: tcp://localhost:2375/
+  DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: ''
 
 Test:
   stage: test
