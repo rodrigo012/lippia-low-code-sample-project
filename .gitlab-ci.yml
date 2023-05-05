@@ -2,7 +2,6 @@ image: docker:latest
 
 services:
   - name: 24.0.0-rc.1-dind-alpine3.17
-    alias: docker
 
 Test:
   stage: test
