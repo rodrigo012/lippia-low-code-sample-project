@@ -21,7 +21,7 @@ Test:
 
 GitHub publish:
   stage: Publish
-  image: crowdar/pipeline:2.0.1
+  image: bitnami/git:2.40.1
   script:
     - git remote add github https://$GITHUB_USER:$GITHUB_TOKEN@github.com/Crowdar/lippia-low-code-sample-project.git
     - git checkout main
