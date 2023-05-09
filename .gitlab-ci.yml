@@ -13,7 +13,7 @@ Test:
     - name: docker:19.03.12-dind
       alias: docker
   script:
-    - docker-compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from lippia
+    - docker compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from lippia
   artifacts:
     when: always
     paths:
