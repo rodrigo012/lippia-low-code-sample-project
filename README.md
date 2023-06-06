@@ -1,4 +1,4 @@
-# Lippia API Lowcode v1.0 @_Unreleased_
+# Lippia API Codeless v1.0 @_Unreleased_
 
 [![Crowdar Official Page](https://img.shields.io/badge/crowdar-official%20page-brightgreen)](https://crowdar.com.ar/)
 [![Lippia Official Page](https://img.shields.io/badge/lippia-official%20page-brightgreen)](https://www.lippia.io/)
@@ -16,17 +16,16 @@
 ## Getting Started
 
 ```bash
-$ git clone https://gitlab.com/lippia-low-code-sample-project
+$ git clone https://github.com/lippia-codeless-sample-project.git && cd "$(basename "$_" .git)"
 
 ```
 
 #### Once the project is cloned and opened with your preferred ide, we can run the tests with the following command
 
 ```bash
-$ mvn clean test
+$  mvn clean test -Dcucumber.tags=@Sample -Denvironment=default
 ```
 
-**/In progress/**
 
 ## Contents
 
