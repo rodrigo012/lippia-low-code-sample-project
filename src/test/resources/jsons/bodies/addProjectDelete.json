@@ -1,0 +1,41 @@
+{
+  "id": "65442c15894cb47ead025aab",
+  "name": "ArchivoParaBorrar",
+  "hourlyRate": {
+    "amount": 0,
+    "currency": "USD"
+  },
+  "clientId": "",
+  "workspaceId": "654424a97b45e936510e0a28",
+  "billable": true,
+  "memberships": [
+    {
+      "userId": "65381f09671f3c6ed98076d8",
+      "hourlyRate": null,
+      "costRate": null,
+      "targetId": "65442c15894cb47ead025aab",
+      "membershipType": "PROJECT",
+      "membershipStatus": "ACTIVE"
+    }
+  ],
+  "color": "#E91E63",
+  "estimate": {
+    "estimate": "PT0S",
+    "type": "AUTO"
+  },
+  "archived": false,
+  "duration": "PT0S",
+  "clientName": "",
+  "note": "NoHacerPruebasHastaBorrarlo",
+  "costRate": null,
+  "timeEstimate": {
+    "estimate": "PT0S",
+    "type": "AUTO",
+    "resetOption": null,
+    "active": false,
+    "includeNonBillable": true
+  },
+  "budgetEstimate": null,
+  "template": false,
+  "public": true
+}
