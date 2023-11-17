@@ -1,0 +1,25 @@
+{
+  "billable": true,
+  "customAttributes": [
+    {
+      "name": "Practice",
+      "namespace": "string",
+      "value": "string"
+    }
+  ],
+  "customFields": [
+    {
+      "customFieldId": "string",
+      "sourceType": "WorkHouse",
+      "value": {}
+    }
+  ],
+  "description": "",
+  "end": "2023-11-10T20:50:13Z",
+  "projectId": "65381f09671f3c6ed98076dc",
+  "start": "2023-11-10T12:00:00Z",
+  "tagIds": [
+    null
+  ],
+  "taskId": null
+}

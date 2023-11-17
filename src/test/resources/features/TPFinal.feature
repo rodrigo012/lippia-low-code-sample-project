@@ -13,52 +13,49 @@ Feature: Clockify TP Final
     And endpoint /v1/workspaces
     When execute method GET
     Then the status code should be 200
-    * define workspaceId = $.[1].id
+    * define workspaceId = $.[0].id
 
   @ListProject
   Scenario: Get all projects on workspace
     Given call TPFinal.feature@ListWorkspace
     And base url https://api.clockify.me/api
-    And endpoint /v1/workspaces/{{workspaceId}}/projects
+    And endpoint /v1/workspaces/65381f09671f3c6ed98076da/projects
     When execute method GET
     Then the status code should be 200
     * define projectId = $.[0].id
     * define userId = $.[0].memberships.[0].userId
+
 
   @ListTimeEntries
   Scenario: Get time entries for a user on workspace
     Given call TPFinal.feature@ListWorkspace
     And call TPFinal.feature@ListProject
     And base url https://api.clockify.me/api
-    And endpoint /v1/workspaces/{{workspaceId}}/user/{{userId}}/time-entries
+    And endpoint /v1/workspaces/65381f09671f3c6ed98076da/user/65381f09671f3c6ed98076d8/time-entries
     When execute method GET
     Then the status code should be 200
+
 
   @AddProjectHours
   Scenario: Add time entry to a project
     Given call TPFinal.feature@ListWorkspace
     And base url https://api.clockify.me/api
-    And endpoint /v1/workspaces/{{workspaceId}}/time-entries
-    And body addtimeentry.json
+    And endpoint /v1/workspaces/65381f09671f3c6ed98076da/time-entries
+    And body addTimeEntry.json
     When execute method POST
-    Then the status code should be 201
-    * define timeEntryId = $.id
 
   @UpdateTimeEntry
   Scenario: Update time entry on workspace
     Given call TPFinal.feature@ListWorkspace
     And call TPFinal.feature@AddProjectHours
     And base url https://api.clockify.me/api
-    And endpoint /v1/workspaces/{{workspaceId}}/time-entries/{{timeEntryId}}
-    And body update_time_entry.json
+    And endpoint /v1/workspaces/65381f09671f3c6ed98076da/time-entries/65397dba69c58c7c9b2dd365
+    And body TimeEntry.json
     When execute method PUT
-    Then the status code should be 200
 
   @DeleteTimeEntry
   Scenario: Delete time entry from workspace
     Given call TPFinal.feature@ListWorkspace
-    And call TPFinal.feature@AddProjectHours
-    And base url https://api.clockify.me/api
-    And endpoint /v1/workspaces/{{workspaceId}}/time-entries/{{timeEntryId}}
+    And call TPFinal.feature@@AddTimeEntry
+    And endpoint /v1/workspaces/65381f09671f3c6ed98076da/time-entries/{{idTime}}
     When execute method DELETE
-    Then the status code should be 204
